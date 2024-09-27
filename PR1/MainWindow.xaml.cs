@@ -24,9 +24,9 @@ namespace PR1
         private void bt_Calc_Click(object sender, RoutedEventArgs e)
         {
             double calc, rnd, rez;
-            calc = Class1.Lib_6(out rnd, out rez);
-            tb_RandomNumber.Text = Convert.ToString(rnd);
-            tb_Rez.Text = Convert.ToString(rez);
+            calc = Class1.Lib_6(out rnd, out rez);// Успользуется библеотека Lib_6
+            tb_RandomNumber.Text = Convert.ToString(rnd);// Выводит рандомное число
+            tb_Rez.Text = Convert.ToString(rez);// Выводит результат подсчета
         }
 
         private void bt_Info_Click(object sender, RoutedEventArgs e)

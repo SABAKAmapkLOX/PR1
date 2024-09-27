@@ -13,25 +13,25 @@ namespace Lib_6
             randomValue = 0;
             numberValue = 0;
             Random rnd = new Random();
-            int randomNumber = rnd.Next(-5, 4);
-            int randomNumber2 = rnd.Next(-5, 4);
-            while (randomNumber != randomNumber2)
+            int randomNumber = rnd.Next(-5, 4);// Генерируется рандомное число от -5 до 4 для randomNumber
+            int randomNumber2 = rnd.Next(-5, 4);// Генерируется рандомное число от -5 до 4 для randomNumber2
+            while (randomNumber != randomNumber2)// Цикл
             {
                 randomNumber2 = randomNumber;
-                if (randomNumber > 0)
+                if (randomNumber > 0)//Условие
                 {
-                    double numberCalc = Math.Sqrt(randomNumber);
+                    double numberCalc = Math.Sqrt(randomNumber);// Возводится в корень
                     numberValue = numberCalc;
                 }
-                if (randomNumber < 0)
+                if (randomNumber < 0)// Условие
                 {
-                    double numberCalc = Math.Pow(randomNumber, 2);
+                    double numberCalc = Math.Pow(randomNumber, 2);// Возводится в степень
                     numberValue = numberCalc;
                 }
-                randomNumber = rnd.Next(-5, 4);
+                randomNumber = rnd.Next(-5, 4);// Генерируется рандомное число от -5 до 4 для randomNumber
                 randomValue = randomNumber2;
             }
-            return 0;
+            return 0;//Вернуть 0
         }
     }
 }
