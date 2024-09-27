@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Пр.Работа№1" Height="280" Width="250">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem x:Name="mi_Info" Header="О программе" Click="bt_Info_Click"/>
+            <MenuItem x:Name="mi_Exit" Header="Выход" Click="bt_Exit_Click"/>
+        </Menu>
+
+        <StackPanel Grid.Row="2" Margin="5">
+            <Label Content="Рандомное число"/>
+            <TextBox x:Name="tb_RandomNumber" Text="" Margin="5" IsReadOnly="True"/>
+            <Label Content="Результат"/>
+            <TextBox x:Name="tb_Rez" Text="" IsReadOnly="True" Margin="5"/>
+            <Button x:Name="bt_Calc" Content="Расчитать" Margin="5" Click="bt_Calc_Click"/>
+            <Button x:Name="bt_Info" Content="О программе" Margin="5" Click="bt_Info_Click"/>
+            <Button x:Name="bt_Exit" Content="Выход" Margin="5" Click="bt_Exit_Click"/>
+        </StackPanel>
 
     </Grid>
 </Window>

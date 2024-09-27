@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Lib_6;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,25 @@ namespace PR1
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void bt_Calc_Click(object sender, RoutedEventArgs e)
+        {
+            double calc, rnd, rez;
+            calc = Class1.Lib_6(out rnd, out rez);
+            tb_RandomNumber.Text = Convert.ToString(rnd);
+            tb_Rez.Text = Convert.ToString(rez);
+        }
+
+        private void bt_Info_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Выполнил:Ермаков Павел ИСП-34 \nПрактическая работа№1" +
+                "\nЗадание:Генерировать случайные числа Х, распределенные в диапазоне от -5 до 4 и вычислять для чисел > 0 X," +
+                " а для чисел < 0 функцию x2. Вычисления прекратить, когда подряд появится два одинаковых случайных числа. На экран необходимо выводить сгенерированное число и результат расчета функции на разных строках");
+        }
+
+        private void bt_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
